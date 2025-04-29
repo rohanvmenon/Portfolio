@@ -1,0 +1,163 @@
+/* ===================================================================
+ * Luther Main Stylesheet
+ * Template Ver. 1.0.0
+ * ------------------------------------------------------------------ */
+
+/* ===================================================================
+ * # SETTINGS
+ * ------------------------------------------------------------------- */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+    --font-1: "Public Sans", sans-serif;
+    --font-2: "DM Serif Display", serif;
+    --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+
+    /* Colors */
+    --color-1: hsla(36, 72%, 70%, 1);
+    --color-2: hsla(168, 62%, 36%, 1);
+    --color-1-light: hsla(36, 72%, 80%, 1);
+    --color-2-light: hsla(168, 62%, 46%, 1);
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    /* Spacing */
+    --base-size: 62.5%;
+    --space: 3.2rem;
+
+    /* Typography */
+    --text-size: 1.9rem;
+    --text-sm: 1.5rem;
+
+    /* Grid */
+    --gutter: 2rem;
+}
+
+/* ===================================================================
+ * # NORMALIZE
+ * ------------------------------------------------------------------- */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-1);
+    font-size: var(--text-size);
+    color: var(--color-black);
+}
+
+/* ===================================================================
+ * # BASE SETUP
+ * ------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-1);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-2);
+}
+
+/* ===================================================================
+ * # GRID
+ * ------------------------------------------------------------------- */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 92%;
+    max-width: 1200px;
+}
+
+.column {
+    flex: 1;
+    padding: 0 var(--gutter);
+}
+
+/* ===================================================================
+ * # TYPOGRAPHY
+ * ------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-2);
+    color: var(--color-black);
+}
+
+p {
+    font-size: var(--text-size);
+    line-height: 1.6;
+}
+
+/* ===================================================================
+ * # BUTTONS
+ * ------------------------------------------------------------------- */
+
+button {
+    font-family: var(--font-1);
+    font-size: var(--text-sm);
+    padding: 1rem 2rem;
+    background-color: var(--color-1);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-2);
+}
+
+/* ===================================================================
+ * # FORMS
+ * ------------------------------------------------------------------- */
+
+input, textarea {
+    font-family: var(--font-1);
+    font-size: var(--text-size);
+    padding: 0.5rem;
+    border: 1px solid var(--color-black);
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-1);
+    outline: none;
+}
+
+/* ===================================================================
+ * # ANIMATIONS
+ * ------------------------------------------------------------------- */
+
+@keyframes sk-scaleout {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
